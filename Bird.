@@ -44,4 +44,3 @@ client.on("messageCreate", async message => {
 		message.channel.send("!ping, !how, !rickroll, !Bird, !question, bye bird")
 	}
 });
-client.login("OTI3Mjc4NzE4MzMyODI5NzE2.YdH5mg.fLDocKgw7zOzmnnbeqlCGtefIBU")
