@@ -1,0 +1,47 @@
+const Discord = require('discord.js');
+
+const client = new Discord.Client({
+	allowedMentions: {
+		parse: ['users', 'roles'],
+		repliedUser: true,
+	
+	},
+	intents: [
+		"GUILDS",
+		"GUILD_MESSAGES",
+		"GUILD_PRESENCES",
+		"GUILD_MEMBERS",
+		"GUILD_MESSAGE_REACTIONS",
+		],
+
+});
+
+client.on("ready", () => {
+	console.log("I am prepared")
+})
+
+
+client.on("messageCreate", async message => {
+	if(message.content === "!ping"){
+		message.channel.send("Good Morning")
+	}
+	if(message.content === "!how"){
+		message.channel.send("idk")
+	}
+    if(message.content === "!rickroll"){
+		message.channel.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+	}
+    if(message.content === "!Bird"){
+		message.channel.send("yes?")
+	}
+	if(message.content === "!question"){
+		message.channel.send("Ya like cheese? cuz I sure do!!!")
+	}
+	if(message.content === "bye bird"){
+		message.channel.send("cya")
+	}
+    if(message.content === "!commands"){
+		message.channel.send("!ping, !how, !rickroll, !Bird, !question, bye bird")
+	}
+});
+client.login("OTI3Mjc4NzE4MzMyODI5NzE2.YdH5mg.fLDocKgw7zOzmnnbeqlCGtefIBU")
